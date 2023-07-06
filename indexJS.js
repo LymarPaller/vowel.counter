@@ -17,5 +17,5 @@ function countVowels() {
 function isVowel(char) {
     
     let vowels = ["a", "e", "i", "o", "u"];
-    return vowels.indexOf(char) >= 0;
+    return vowels.includes(char);
 }
