@@ -1,9 +1,10 @@
 function countVowels() {
-    var inputText = document.getElementById("word-input").value;
-    var vowelCount = 0;
+    let inputText = document.getElementById("word-input").value;
+    let lowerCaseInput = inputText.toLowerCase();
+    let vowelCount = 0;
 
-    for (var i = 0; i < inputText.length; i++) {
-        var currentChar = inputText.charAt(i);
+    for (let i = 0; i < lowerCaseInput.length; i++) {
+        let currentChar = lowerCaseInput.charAt(i);
         if (isVowel(currentChar)) {
             vowelCount++;
         }
@@ -12,13 +13,9 @@ function countVowels() {
     document.getElementById("result").innerHTML = `Vowel Count: ${vowelCount}`;
 }
 
+
 function isVowel(char) {
     
-    var vowels = ["a", "e", "i", "o", "u" , "A", "E", "I", "O", "U"];
-
-    if (vowels.indexOf(char) >= 0) {
-        return true;
-    } else {
-        return false;
-    }
+    let vowels = ["a", "e", "i", "o", "u"];
+    return vowels.indexOf(char) >= 0;
 }
